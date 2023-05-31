@@ -50,12 +50,12 @@ def mandelbrot(myX, myY, zoom, width, height):
 if __name__ == '__main__':
     ts = datetime.now()
     parser = ArgumentParser()
-    parser.add_argument("x", type=float, help="x coordinate of the center of the plot", default=-0.75)
-    parser.add_argument("y", type=float, help="y coordinate of the center of the plot", default=0.0)
-    parser.add_argument("zoom", type=int, help="Zoom level of the plot", default=1)
-    parser.add_argument("w", type=int, help="Width of the plot", default=480)
-    parser.add_argument("h", type=int, help="Height of the plot", default=720)
-    parser.add_argument("filename", type=str, help="Specify a filename for the output", default="mandelbrot")
+    parser.add_argument("x", type=float, help="x coordinate of the center of the plot", nargs='?', default=-0.75)
+    parser.add_argument("y", type=float, help="y coordinate of the center of the plot", nargs='?', default=0.0)
+    parser.add_argument("zoom", type=int, help="Zoom level of the plot", nargs='?', default=1)
+    parser.add_argument("w", type=int, help="Width of the plot", nargs='?', default=480)
+    parser.add_argument("h", type=int, help="Height of the plot", nargs='?', default=720)
+    parser.add_argument("filename", type=str, help="Specify a filename for the output", nargs='?', default="mandelbrot")
     args = parser.parse_args()
     print(str(args.x) + ", " + str(args.y) + ", " + str(args.zoom) + ", " + str(args.w) + ", " + str(
         args.h) + ", " + args.filename + ".tiff")
