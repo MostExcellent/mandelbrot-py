@@ -21,7 +21,7 @@ width: Width of the plot (default: 480)
 height: Height of the plot (default: 720)
 filename: Specify a filename for the output (default: "mandelbrot")
 
-# Example:
+## Example:
     
     python mandelbrot.py -0.5 0.0 2 800 600 fractal_image
     
